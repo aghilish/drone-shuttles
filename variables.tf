@@ -25,57 +25,10 @@ variable "network" {
 
 variable "subnet_primary" {
   description = "The subnetwork created in the primary network to host the cluster in"
-  default     = "subnet-primary"
 }
 
 variable "subnet_secondary" {
   description = "The subnetwork created in the secondary network to host the cluster in"
-  default     = "subnet-secondary"
-}
-
-variable "subnet_ip_primary" {
-  description = "The primary subnetwork ip range"
-}
-
-variable "subnet_ip_secondary" {
-  description = "The secondary subnetwork ip range"
-}
-
-variable "ip_range_pods_name_primary" {
-  description = "The secondary ip range to use for pods in the primary cluster"
-  default     = "ip-range-pods-primary"
-}
-
-variable "ip_range_pods_name_secondary" {
-  description = "The secondary ip range to use for pods in the secondary cluster"
-  default     = "ip-range-pods-secondary"
-}
-
-variable "ip_range_pods_primary" {
-  description = "The secondary ip range to use for pods in the primary cluster"
-}
-
-variable "ip_range_pods_secondary" {
-  description = "The secondary ip range to use for pods in the secondary cluster"
-}
-
-
-variable "ip_range_services_name_primary" {
-  description = "The secondary ip range to use for services in the primary cluster"
-  default     = "ip-range-scv-primary"
-}
-
-variable "ip_range_services_primary" {
-  description = "The secondary ip range to use for services in the primary cluster"
-}
-
-variable "ip_range_services_name_secondary" {
-  description = "The secondary ip range to use for services in the secondary cluster"
-  default     = "ip-range-scv-secondary"
-}
-
-variable "ip_range_services_secondary" {
-  description = "The secondary ip range to use for services in the secondary cluster"
 }
 
 variable "zones_primary" {

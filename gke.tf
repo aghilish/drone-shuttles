@@ -14,9 +14,7 @@ module "gke-primary" {
   zones                  = var.zones_primary
   network                = var.network
   subnet                 = var.subnet_primary
-  master_ipv4_cidr_block = "10.0.0.0/28"
   master_authorized_networks_block = "0.0.0.0/0"
-  master_authorized_networks_block2 = "0.0.0.0/0"
   operator_path          = var.operator_path
 
 }
@@ -29,8 +27,6 @@ module "gke-secondary" {
   zones                  = var.zones_secondary
   network                = var.network
   subnet                 = var.subnet_secondary
-  master_ipv4_cidr_block = "10.1.0.0/28"
   master_authorized_networks_block = "0.0.0.0/0"
-  master_authorized_networks_block2 = "0.0.0.0/0"
   operator_path          = var.operator_path
 }

@@ -37,11 +37,7 @@ module "gke" {
   master_authorized_networks = [{
       cidr_block   = var.master_authorized_networks_block
       display_name = "VPC"
-    },
-    {
-      cidr_block   = var.master_authorized_networks_block2
-      display_name = "VPC2"
-    },
+    }
   ]
 
   node_pools_oauth_scopes = {
@@ -66,6 +62,6 @@ resource "google_compute_firewall" "sidecar-allow" {
     protocol = "tcp"
     ports    = ["15017"]
   }
-
-  source_ranges = [var.master_ipv4_cidr_block]
+  
+  source_ranges = [var.master_authorized_networks_block]
 }

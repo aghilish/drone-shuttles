@@ -15,3 +15,12 @@ variable "network" {
   default     = "gke-network"
 }
 
+variable "subnet_primary" {
+  description = "The subnetwork created in the primary network to host the cluster in"
+}
+
+variable "subnet_secondary" {
+  description = "The subnetwork created in the secondary network to host the cluster in"
+}
+
+

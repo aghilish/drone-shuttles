@@ -22,15 +22,7 @@ variable "subnet" {
   description = "The subnetwork created in the network to host the cluster in"
 }
 
-variable "master_ipv4_cidr_block" {
-  description = "The master cidr to be used"
-}
-
 variable "master_authorized_networks_block" {
-  description = "The master authorised network to be used"
-}
-
-variable "master_authorized_networks_block2" {
   description = "The master authorised network to be used"
 }
 
