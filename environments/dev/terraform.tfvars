@@ -39,4 +39,5 @@ zones_secondary  = ["europe-west1-b"]
 acm_sync_repo           = "git@github.com:GoogleCloudPlatform/csp-config-management.git"
 acm_sync_branch         = "1.0.0"
 acm_policy_dir          = "foo-corp"
+operator_path           = "config-management-operator.yaml"
 

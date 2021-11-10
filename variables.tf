@@ -109,5 +109,4 @@ variable "acm_policy_dir" {
 variable "operator_path" {
   description = "Path to the operator yaml config. If unset, will download from GCS releases."
   type        = string
-  default     = null
 }
