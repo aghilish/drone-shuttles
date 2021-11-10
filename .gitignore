@@ -1,10 +1,8 @@
 .terraform.lock.hcl
 .terraform/
 tf-client.json
-gke_bdaa-anthos-cb2aghz-tbx-lc1uno_europe-west1-b_secondary.secret
-gke_bdaa-anthos-cb2aghz-tbx-lc1uno_europe-west3-b_primary.secret
-gke_bdaa-ctda-kg-dev-sc-rkf7q_europe-west1-b_secondary.secret
-gke_bdaa-ctda-kg-dev-sc-rkf7q_europe-west3-b_primary.secret
 install_asm_1.9
 istio-1.10.4-asm.6-linux-amd64.tar.gz
 istio-1.10.4-asm.6/
+primary-outdir
+secondary-outdir
