@@ -15,6 +15,10 @@ module "gke-primary" {
   network                = var.network
   subnet                 = var.subnet_primary
   master_authorized_networks_block = "0.0.0.0/0"
+  
+  acm_sync_repo          = var.acm_sync_repo
+  acm_sync_branch        = var.acm_sync_branch
+  acm_policy_dir         = var.acm_policy_dir
   operator_path          = var.operator_path
 
 }
@@ -28,5 +32,9 @@ module "gke-secondary" {
   network                = var.network
   subnet                 = var.subnet_secondary
   master_authorized_networks_block = "0.0.0.0/0"
+  
+  acm_sync_repo          = var.acm_sync_repo
+  acm_sync_branch        = var.acm_sync_branch
+  acm_policy_dir         = var.acm_policy_dir
   operator_path          = var.operator_path
 }
