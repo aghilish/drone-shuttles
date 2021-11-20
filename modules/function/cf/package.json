@@ -11,7 +11,8 @@
     "dev": "nodemon"
   },
   "dependencies": {
-    "fastify": "^3.7.0"
+    "fastify": "^3.7.0",
+    "mariadb": "^2.5.5"
   },
   "devDependencies": {
     "@google-cloud/functions-framework": "^2.0.0",
