@@ -5,7 +5,7 @@ locals {
 # Compress source code
 data "archive_file" "source" {
   type        = "zip"
-  source_dir  = "cf/"
+  source_dir  = "modules/function/cf"
   output_path = "/tmp/function-${local.timestamp}.zip"
 }
 
@@ -44,6 +44,7 @@ resource "google_project_service" "cb" {
 resource "google_cloudfunctions_function" "function" {
   name    = var.name
   runtime = "nodejs12"
+  region = var.region
 
   available_memory_mb   = 128
   source_archive_bucket = google_storage_bucket.bucket.name
@@ -54,10 +55,9 @@ resource "google_cloudfunctions_function" "function" {
 
 # Create IAM entry so all users can invoke the function
 resource "google_cloudfunctions_function_iam_member" "invoker" {
-  project        = google_cloudfunctions_function.function.project
-  region         = google_cloudfunctions_function.function.region
+  project        = var.project
+  region         = var.region
   cloud_function = google_cloudfunctions_function.function.name
-
   role   = "roles/cloudfunctions.invoker"
   member = "allUsers"
 }
