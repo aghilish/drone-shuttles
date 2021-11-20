@@ -1,6 +1,6 @@
 module "delete-posts" {
   source      = "./modules/function"
-  project     = var.project
+  project     = var.project_id
   name        = "delete-posts"
   entry_point = "app"
 }
