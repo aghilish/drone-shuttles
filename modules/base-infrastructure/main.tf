@@ -23,3 +23,14 @@ resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges-b
   private_ip_google_access = true
   private_ipv6_google_access = true
 }
+
+module "address" {
+  source       = "terraform-google-modules/address/google"
+  version      = "3.0.0"
+  project_id   = var.project_id
+  region       = "europe-west3"
+  address_type = "EXTERNAL"
+  names = [
+    "ghost-primary-external-ip"
+  ]
+}
