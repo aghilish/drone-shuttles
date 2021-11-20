@@ -9,3 +9,7 @@ output "public_key_secondary" {
   description = "The public key for the git repo."
   sensitive   = false
 }
+
+output "function_url" {
+  value = module.function.function_url
+}

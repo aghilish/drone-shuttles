@@ -20,6 +20,7 @@ module "project-services" {
     "monitoring.googleapis.com",
     "logging.googleapis.com",
     "cloudbuild.googleapis.com",
-    "servicenetworking.googleapis.com"
+    "servicenetworking.googleapis.com", 
+    "vpcaccess.googleapis.com"
   ]
 }

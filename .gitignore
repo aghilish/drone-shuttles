@@ -6,3 +6,4 @@ istio-1.10.4-asm.6-linux-amd64.tar.gz
 istio-1.10.4-asm.6/
 primary-outdir
 secondary-outdir
+modules/function/cf/node_modules
