@@ -11,6 +11,7 @@ data "archive_file" "source" {
 
 # Create bucket that will host the source code
 resource "google_storage_bucket" "bucket" {
+  project = var.project
   name = "${var.project}-function"
 }
 
@@ -43,6 +44,7 @@ resource "google_project_service" "cb" {
 # Create Cloud Function
 resource "google_cloudfunctions_function" "function" {
   name    = var.name
+  project = var.project
   runtime = "nodejs12"
   region = var.region
 
