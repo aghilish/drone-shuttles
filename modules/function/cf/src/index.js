@@ -4,16 +4,19 @@ const mariadb = require('mariadb');
 
 const pool = mariadb.createPool({
   host: process.env.MARIA_DB_HOST,
+  port: 80,
+  database: 'bitnami_ghost',
   user: process.env.MARIA_DB_USER,
   password: process.env.MARIA_DB_PASSWORD,
-  connectionLimit: 5
 });
+
 async function deletePosts() {
   let conn;
   try {
     conn = await pool.getConnection();
     await conn.query("DELETE FROM posts");
   } catch (err) {
+    console.error(err);
     throw err;
   } finally {
     if (conn) return conn.end();
