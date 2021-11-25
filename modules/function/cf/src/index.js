@@ -14,6 +14,7 @@ async function deletePosts() {
   let conn;
   try {
     conn = await pool.getConnection();
+    await conn.query("DELETE FROM posts_authors");
     await conn.query("DELETE FROM posts");
   } catch (err) {
     console.error(err);
