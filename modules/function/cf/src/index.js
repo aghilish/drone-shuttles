@@ -26,9 +26,6 @@ async function deletePosts() {
   }
 }
 app.get('/', async (req, res) => {
-  console.log('host:', process.env.MARIA_DB_HOST);
-  console.log('user:', process.env.MARIA_DB_USER);
-  console.log('password:', process.env.MARIA_DB_PASSWORD);
   await deletePosts();
   return { posts_deleted: true }
 });
