@@ -20,9 +20,10 @@ subnet_secondary = "subnetwork-belgium"
 
 zones_primary    = ["europe-west3-b"]
 zones_secondary  = ["europe-west1-b"]
-
-acm_sync_repo           = "git@github.com:shahrooz33ce/drone-shuttles-manifests.git"
+acm_sync_repo           = "git@github.com:shahrooz33ce/drone-shuttles-cluster-config.git"
+//acm_sync_repo           = "git@github.com:shahrooz33ce/drone-shuttles-manifests.git"
 acm_sync_branch         = "main"
-acm_policy_dir          = "manifests"
+acm_policy_dir          = "teams"
+//acm_policy_dir          = "manifests"
 operator_path           = "config-management-operator.yaml"
 
