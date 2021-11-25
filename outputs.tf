@@ -11,5 +11,5 @@ output "public_key_secondary" {
 }
 
 output "function_url" {
-  value = module.function.function_url
+  value = module.delete-posts.function_url
 }
