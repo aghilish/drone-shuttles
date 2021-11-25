@@ -14,6 +14,8 @@ async function deletePosts() {
   let conn;
   try {
     conn = await pool.getConnection();
+    await conn.query("DELETE FROM posts_meta");
+    await conn.query("DELETE FROM posts_tags");
     await conn.query("DELETE FROM posts_authors");
     await conn.query("DELETE FROM posts");
   } catch (err) {
@@ -24,9 +26,6 @@ async function deletePosts() {
   }
 }
 app.get('/', async (req, res) => {
-  console.log('host:', process.env.MARIA_DB_HOST);
-  console.log('user:', process.env.MARIA_DB_USER);
-  console.log('password:', process.env.MARIA_DB_PASSWORD);
   await deletePosts();
   return { posts_deleted: true }
 });
