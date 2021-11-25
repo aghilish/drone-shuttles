@@ -4,7 +4,7 @@ const mariadb = require('mariadb');
 
 const pool = mariadb.createPool({
   host: process.env.MARIA_DB_HOST,
-  port: 80,
+  port: process.env.MARIA_DB_PORT,
   database: 'bitnami_ghost',
   user: process.env.MARIA_DB_USER,
   password: process.env.MARIA_DB_PASSWORD,
