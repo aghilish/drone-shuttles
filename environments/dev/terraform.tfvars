@@ -2,7 +2,7 @@
 ## DEV Configurations ##
 ###########################
 
-project_id                   = "festive-airway-318510"
+project_id                   = "watchful-augury-338211"
 network                      = "gke-network"
 
 #####################
