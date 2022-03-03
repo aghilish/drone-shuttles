@@ -11,7 +11,6 @@ module "gke" {
   name                   = var.name
   project_id             = var.project_id
   source                 = "terraform-google-modules/kubernetes-engine/google//modules/beta-public-cluster"
-  version                = "16.1.0"
   regional               = false
   region                 = var.region
   network                = var.network
