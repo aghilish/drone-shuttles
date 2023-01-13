@@ -4,14 +4,14 @@
   "description": "",
   "main": "./src/index.js",
   "engines": {
-    "node": "12"
+    "node": "19"
   },
   "scripts": {
     "start": "functions-framework --target=app --source=src",
     "dev": "nodemon"
   },
   "dependencies": {
-    "fastify": "^3.7.0",
+    "fastify": "^3.29.4",
     "mariadb": "^2.5.5"
   },
   "devDependencies": {
